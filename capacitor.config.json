@@ -1,0 +1,11 @@
+{
+  "appId": "com.captainbilling.mobile",
+  "appName": "Captain Billing",
+  "webDir": "www",
+  "plugins": {
+    "FirebaseAuthentication": {
+      "skipNativeAuth": true,
+      "providers": ["google.com"]
+    }
+  }
+}

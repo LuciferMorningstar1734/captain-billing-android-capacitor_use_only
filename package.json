@@ -1,0 +1,24 @@
+{
+  "name": "captain-billing-android",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Captain Billing for Android - Google login, synced with the Windows app via Firebase",
+  "scripts": {
+    "build:web": "esbuild src/cloud.js --bundle --minify --format=iife --global-name=Cloud --target=chrome90 --outfile=www/vendor/cloud.js",
+    "prepare-web": "node scripts/copy-vendor.js && npm run build:web",
+    "test": "node scripts/test-calc.js && node scripts/test-cloud.js"
+  },
+  "dependencies": {
+    "@capacitor-firebase/authentication": "^6.3.1",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/filesystem": "^6.0.1",
+    "@capacitor/share": "^6.0.2",
+    "firebase": "^11.0.0",
+    "jspdf": "^2.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "esbuild": "^0.24.0"
+  }
+}
